@@ -10,6 +10,9 @@ function karatsuba(x, y) {
     let b = x %  Math.pow(10,m);
     let d = y %  Math.pow(10,m);
   
+    console.log('a = ' + a + ' b = ' + b + ' c = ' + c + ' d = ' + d);
+    console.log("----------------------------------------");
+
     let ac = karatsuba(a, c);
     let bd = karatsuba(b, d);
     let e = karatsuba(b+a, d+c)-ac-bd;
