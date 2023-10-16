@@ -10,8 +10,8 @@ function karatsuba(x, y) {
     let b = x %  Math.pow(10,m);
     let d = y %  Math.pow(10,m);
   
-    console.log('a = ' + a + ' b = ' + b + ' c = ' + c + ' d = ' + d);
-    console.log("----------------------------------------");
+    // console.log('a = ' + a + ' b = ' + b + ' c = ' + c + ' d = ' + d);
+    // console.log("----------------------------------------");
 
     let ac = karatsuba(a, c);
     let bd = karatsuba(b, d);
@@ -20,4 +20,11 @@ function karatsuba(x, y) {
     return ac * Math.pow(10, m*2) + e * Math.pow(10,m) + bd;
   }
 
-  console.log(karatsuba(92846745,28388462))
+
+console.log("Karatsuba algorithm: ");
+const t0 = performance.now()
+
+console.log(karatsuba(92846745,28388462))
+
+const t1 = performance.now()
+console.log(`Time it takes to run the function: ${t1 - t0} ms`)
